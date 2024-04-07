@@ -6,35 +6,39 @@ import { ref } from "./reactivity/ref";
 const app = document.querySelector("#app")
 
 
-// const b = ref('1')
+const obj = reactive({
+    name: '小詹',
+    age: 20
+})
 // console.log(b)
-// effect(()=>{
-//     /**
-//      * dom 和 数据连接起来
-//      */
-//     app.innerHTML = b.value
-// })
+obj.name
+effect(() => {
+    /**
+     * dom 和 数据连接起来
+     */
+    app.innerHTML = obj.name
+})
 
 // setTimeout(()=>{
 //     b.value = "大满"
 // },1000)
 
 
-const obj = reactive({
-    name: "小满",
-    age: 18,
-})
+// const obj = reactive({
+//     name: "小满",
+//     age: 18,
+// })
 
 // watch(obj, (newVal, oldVal) => {
 //     console.log(newVal, oldVal)
 // })
 
-watch(() => obj.name, (newVal, oldVal) => {
-    console.log(newVal, oldVal)
-}, {
-    // immediate: true
-    flush: 'post'
-})
+// watch(() => obj.name, (newVal, oldVal) => {
+//     console.log(newVal, oldVal)
+// }, {
+//     // immediate: true
+//     flush: 'post'
+// })
 
 obj.name = "大满"
 console.log(1)
