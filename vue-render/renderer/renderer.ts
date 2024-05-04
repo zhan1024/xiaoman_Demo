@@ -53,7 +53,7 @@ const createRenderer = () => {
         }
     }
     const patchKeyChildren = () => {
-       //1.手写diff算法 + 最长递增子序列
+        //1.手写diff算法 + 最长递增子序列
     }
     const patch = (n1, n2, container) => {
         if (!n1) {
@@ -67,12 +67,13 @@ const createRenderer = () => {
         }
     }
     const render = (vnode: Vnode, container) => {
+        debugger
         if (vnode) {
             //创建
             patch(container._vnode, vnode, container)
         } else {
             //不存在一会儿再说
-            if(container._vnode){
+            if (container._vnode) {
                 unmount(container._vnode)
             }
         }

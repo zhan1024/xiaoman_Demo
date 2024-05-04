@@ -87,7 +87,7 @@ const createRenderer = () => {
         }
         insert(root, container, anchor)
     }
-    const patchElement = (n1, n2,) => {
+    const patchElement = (n1, n2) => {
         //.log(n1, n2)
         const el = n2.el = n1.el //复制一份element 给新的Vnode
         //patchChildren(n1, n2, el)
