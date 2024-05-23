@@ -45,3 +45,9 @@ stack.push(8765)
 stack.push(87)
 stack.push(8)
 console.log(stack);
+console.log(stack.size());
+console.log(stack.isEmpty());
+stack.print();
+stack.clear();
+stack.push(765)
+stack.print();
