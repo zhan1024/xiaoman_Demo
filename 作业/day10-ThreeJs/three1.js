@@ -9,16 +9,17 @@ const scene = new THREE.Scene();
 //创建相机
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 //创建渲染器
-const renderer = new THREE.WebGLRenderer()
+const renderer = new THREE.WebGLRenderer({ antialias: true })
 //定义颜色 红色 蓝色 白色 紫色 粉色 黄色
-const colors = [0xff0000, 0x00ff00, 0x0000ff, 0xffff00, 0xff00ff, 0x00ffff];
+const colors = [0xff0000, 0x00ff00, 0xFFFFFF, 0xffff00, 0xff00ff, 0x00ffff];
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 const geometry = new THREE.BoxGeometry(50, 100, 50);
 const controls = new OrbitControls(camera, renderer.domElement);
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-console.log('material', material);
-const cube = new THREE.Mesh(geometry, material);
+// const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+const materials = colors.map(color => new THREE.MeshBasicMaterial({ 'color': color }));
+console.log('materials', materials);
+const cube = new THREE.Mesh(geometry, materials);
 scene.add(cube);
 camera.position.z = 150;
 controls.update();
