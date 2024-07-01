@@ -11,18 +11,18 @@ hero:
    alt: VitePress
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 快速开始
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: 面试大全
       link: /api-examples
 
 features:
-  - title: Feature
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Vue
+    details: Vue面试题
+  - title: React
+    details: React面试题
+  - title: 手写题
+    details: 手撕PromiseA+ 防抖 节流 call等
 ---
 
