@@ -5,6 +5,7 @@ export default defineConfig({
   title: "xiaozhan",
   description: "this is xiaozhan project",
   themeConfig: {
+    logo: "/logo.jpg",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },

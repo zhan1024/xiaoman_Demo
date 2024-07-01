@@ -6,6 +6,9 @@ hero:
   name: "小詹杂货铺"
   text: "this is xiaozhan project"
   tagline: "我本地没问题"
+  image:
+   src: /vitepress-logo-large.webp
+   alt: VitePress
   actions:
     - theme: brand
       text: Markdown Examples
