@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "xiaozhan",
+  outDir: "docs",
   base: "/xiaoman_Demo/",
   description: "this is xiaozhan project",
   themeConfig: {
