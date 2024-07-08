@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "小詹杂货铺"
   text: "this is xiaozhan project"
-  tagline: "我本地没问题"
+  tagline: "我本地没问题呀"
   image:
    src: /vitepress-logo-large.webp
    alt: VitePress
