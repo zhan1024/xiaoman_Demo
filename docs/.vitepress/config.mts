@@ -4,8 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "xiaozhan",
   description: "this is xiaozhan project",
-  outDir: "docs",
-  base: "/docs/",
   themeConfig: {
     logo: "/logo.jpg",
     // https://vitepress.dev/reference/default-theme-config
