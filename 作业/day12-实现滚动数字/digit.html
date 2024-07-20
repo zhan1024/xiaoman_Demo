@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .digit-container {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .digit {
+    display: block;
+    width: 50px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+  }
+</style>
+
+<body>
+  <div class="digit-container">
+    <span class="digit" id="digit">0</span>
+  </div>
+</body>
+<script>
+  let currentDigit = 0;
+  const digitElement = document.getElementById('digit');
+
+  function updateDigit() {
+    // Increase current digit
+    currentDigit = (currentDigit + 1) % 10;
+
+    // Apply transform animation
+    digitElement.style.transform = 'translateY(100%)';
+
+    // Update digit after animation
+    setTimeout(() => {
+      digitElement.textContent = currentDigit;
+      digitElement.style.transform = 'translateY(0)';
+    }, 300); // 300ms should match transition duration
+  }
+
+  // Update digit every 1 second
+  setInterval(updateDigit, 1500);
+
+  // Initial update
+  updateDigit();
+
+</script>
+
+</html>
